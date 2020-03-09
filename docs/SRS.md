@@ -1,4 +1,4 @@
-![logo](https://github.com/LazuRR/TreeOnDesktop/blob/master/project_marketing/logo/moc6.jpg) <br/>
+![logo](https://github.com/LazuRR/TIPSY/blob/master/docs/mockups/FullColor_1280x1024_72dpi.png) <br/>
 
 # Требования к проекту
 
