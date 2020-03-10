@@ -183,7 +183,7 @@ main{
     border: 1px dashed black;
 }
 
-div {
+div, p {
     border: black 1px dashed;
 }
 
@@ -251,20 +251,46 @@ main {
   width: 80%;
   height: 90%;
   margin: 5% auto auto auto;
+  /* border: 2px solid gray;
+  border-radius: 2%; */
 }
 
-.paper_drink_info div{
+.paper_drink_info div {
   width: 100%;
   height: 20%;
+  display: flex;
 }
 
-.name_drink{
+.name_drink {
   font-size: 60px;
   font-weight: 1000;
 }
 
-.name_drink p{
-  border: 1px dashed black;
+.name_drink p {
   text-align: center;
   margin-top: 5%;
+  width: 100%;
+}
+
+.paper_drink_info div div{
+  height: 100%;
+  width: 48%;
+  display: flex;
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.paper_drink_info div div p{
+  text-align: center;
+  width: 100%;
+}
+
+.paper_drink_info  div div div{
+  width: 20%;
+}
+
+.paper_drink_info div div div img{
+  margin-top: 45%;
+  margin-left: 8%;
+  height: 40%;
 }
