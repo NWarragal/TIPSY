@@ -31,7 +31,7 @@ anim.addEventListener("complete", function() {
         // instead of having an extra trigger 
         // to open the modal again (just for demo purpose)
         anim.setDirection(1);
-        //anim.play();
+        // anim.play();
         body.classList.remove("completed");
     } else {
         // The modal is open, which triggers the content transitions
