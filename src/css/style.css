@@ -194,7 +194,7 @@ aside {
   top: 0;
   left: 100%;
   margin-left: -3%;
-  /* background-color: #fed057; */
+  /* background-color: #fed057; пока неактивный правый сайдбар*/
 }
 
 .middle_screen{
@@ -237,9 +237,10 @@ main {
   margin: 0 auto 0 auto;
 }
 
-.image_logo {
-  margin-top: -130px;
-  height: 400px;
+.image_logo { 
+  /* margin-top: -130px; это вариант для предыдущего логотипа! */
+  /* height: 400px; */
+  height: 200px;
 }
 
 .paper_drink_info {
