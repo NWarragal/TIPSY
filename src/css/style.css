@@ -3,6 +3,22 @@
   box-sizing: border-box;
 }
 
+@keyframes button_hover {
+  from {
+    background-color: #FFFFFF;
+    color: black;
+  }
+  35% {
+    background-color: #fce5ad;
+    color: gray;
+  }
+  to {
+    background-color: #fed057;
+    color: white;
+  }
+}
+
+
 html, body {
   height: 100%;
 }
@@ -176,7 +192,7 @@ h2 {
 }
 
 /* my code */
-header,
+/* header,
 footer,
 aside,
 main{
@@ -185,7 +201,7 @@ main{
 
 div, p {
     border: black 1px dashed;
-}
+} */
 
 aside {
   width: 3%;
@@ -194,7 +210,7 @@ aside {
   top: 0;
   left: 100%;
   margin-left: -3%;
-  /* background-color: #fed057; */
+  /* background-color: #fed057; пока неактивный правый сайдбар*/
 }
 
 .middle_screen{
@@ -233,13 +249,24 @@ main {
   height: 100%;
 }
 
+.swiper-container{
+  height: 100%;
+  z-index: -1;
+}
+
+.swiper-wrapper{
+  height: 100%;
+}
+
 .logo {
   margin: 0 auto 0 auto;
 }
 
-.image_logo {
-  margin-top: -130px;
-  height: 400px;
+.image_logo { 
+  /* margin-top: -130px; это вариант для предыдущего логотипа! */
+  /* height: 400px; */
+  height: 200px;
+  margin-top: -10px;
 }
 
 .paper_drink_info {
@@ -305,4 +332,11 @@ main {
   /* color: white; */
   font-size: 20px;
   font-weight: 700;
+}
+
+.find_drink button:hover{
+  animation: button_hover 0.15s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
+  cursor: pointer;
 }
