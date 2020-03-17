@@ -3,6 +3,22 @@
   box-sizing: border-box;
 }
 
+@keyframes button_hover {
+  from {
+    background-color: #FFFFFF;
+    color: black;
+  }
+  35% {
+    background-color: #fce5ad;
+    color: gray;
+  }
+  to {
+    background-color: #fed057;
+    color: white;
+  }
+}
+
+
 html, body {
   height: 100%;
 }
@@ -316,4 +332,11 @@ main {
   /* color: white; */
   font-size: 20px;
   font-weight: 700;
+}
+
+.find_drink button:hover{
+  animation: button_hover 0.15s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
+  cursor: pointer;
 }
