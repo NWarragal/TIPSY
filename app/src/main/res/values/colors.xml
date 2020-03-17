@@ -3,4 +3,18 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+
+    <!-- colors for navigation buttons on the main screen-->
+    <color name="brightThemeNavigationButtons">#000000</color>
+    <color name="darkThemeNavigationButtons">#A1FFFFFF</color>
+
+    <!-- colors for main screen text-->
+    <color name="mainScreenBrightThemeTextColor">#000000</color>
+    <color name="mainScreenDarkThemeTextColor">#000000</color>
+
+    <!-- colors for main screen indicators-->
+    <color name="mainScreenBrightThemeSelectedIndicator">#DFDADA</color>
+    <color name="mainScreenBrightThemeDefaultIndicator">#949393</color>
+    <color name="mainScreenDarkThemeSelectedIndicator">#000000</color>
+    <color name="mainScreenDarkThemeDefaultIndicator">#000000</color>
 </resources>
