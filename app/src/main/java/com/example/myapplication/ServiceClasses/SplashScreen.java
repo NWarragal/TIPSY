@@ -1,10 +1,11 @@
-package com.example.myapplication;
+package com.example.myapplication.ServiceClasses;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.myapplication.R;
 
 
 public class SplashScreen extends Activity {
