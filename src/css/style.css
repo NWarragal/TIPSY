@@ -5,7 +5,7 @@
 
 @keyframes button_hover {
   from {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     color: black;
   }
   35% {
@@ -18,13 +18,13 @@
   }
 }
 
-
-html, body {
+html,
+body {
   height: 100%;
 }
 
 body {
-  /* background-color: rgb(134, 99, 230); */
+  background-color: #fce5ad; 
   margin: 0px;
   overflow: hidden;
   font-family: "Roboto", sans-serif;
@@ -37,7 +37,7 @@ body {
   display: block;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   text-align: center;
   opacity: 1;
 }
@@ -46,7 +46,8 @@ body {
   -webkit-transition: opacity 0.4s ease 0.1s, color 0.2s, -webkit-transform 0.2s;
   transition: opacity 0.4s ease 0.1s, color 0.2s, -webkit-transform 0.2s;
   transition: opacity 0.4s ease 0.1s, color 0.2s, transform 0.2s;
-  transition: opacity 0.4s ease 0.1s, color 0.2s, transform 0.2s, -webkit-transform 0.2s;
+  transition: opacity 0.4s ease 0.1s, color 0.2s, transform 0.2s,
+    -webkit-transform 0.2s;
   opacity: 0;
   border: none;
   background: none;
@@ -66,7 +67,7 @@ body {
 #close:focus {
   outline: none;
   -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .modal {
@@ -78,29 +79,32 @@ body {
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
 }
 .modal__content {
   opacity: 0;
   -webkit-transform: scale(0.8) translate3D(0, -20px, 0);
-          transform: scale(0.8) translate3D(0, -20px, 0);
-  -webkit-transition: opacity 0.2s, -webkit-transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1);
-  transition: opacity 0.2s, -webkit-transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1);
+  transform: scale(0.8) translate3D(0, -20px, 0);
+  -webkit-transition: opacity 0.2s,
+    -webkit-transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1);
+  transition: opacity 0.2s,
+    -webkit-transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1);
   transition: opacity 0.2s, transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1);
-  transition: opacity 0.2s, transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1), -webkit-transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1);
+  transition: opacity 0.2s, transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1),
+    -webkit-transform 0.8s cubic-bezier(0.09, 0.52, 0.25, 1);
   text-align: center;
   display: -webkit-box;
   display: flex;
   -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
   padding: 1em;
 }
 .modal h1 {
@@ -115,80 +119,80 @@ body {
 .open .modal__content {
   opacity: 1;
   -webkit-transform: scale(1) translate3D(0, 0, 0);
-          transform: scale(1) translate3D(0, 0, 0);
+  transform: scale(1) translate3D(0, 0, 0);
 }
 #menu {
-	height: 100%;
-	position: fixed;
-	background-color: #fed057;
-	width: 300px;
-	transition: 1000ms all cubic-bezier(0.19, 1, 0.22, 1);
-	transform: translateX(-100%);
-	left: 60px;
+  height: 100%;
+  position: fixed;
+  background-color: #9900ee;
+  width: 300px;
+  transition: 1000ms all cubic-bezier(0.19, 1, 0.22, 1);
+  transform: translateX(-100%);
+  left: 60px;
 }
 #menu.expanded {
-	transform: translateX(0%);
-	left: 0px;
+  transform: translateX(0%);
+  left: 0px;
 }
 .menu-inner {
-	width: 100%;
-	height: 100%;
-	position: relative;
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 #blob {
-	top: 0;
-	z-index: -1;
-	right: 60px;
-	transform: translateX(100%);
-	height: 100%;
-	position: absolute;
+  top: 0;
+  z-index: -1;
+  right: 60px;
+  transform: translateX(100%);
+  height: 100%;
+  position: absolute;
 }
 #blob-path {
-	height: 100%;
-	fill: #fed057;
+  height: 100%;
+  fill: #9900ee;
 }
 .hamburger {
-	right: 20px;
-	position: absolute;
-	width: 20px;
-	height: 20px;
-	margin-top: -10px;
+  right: 20px;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
 }
 .hamburger .line {
-	width: 100%;
-	height: 4px;
-	background-color: #fff;
-	position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
 }
 .hamburger .line:nth-child(2) {
-	top: 50%;
-	margin-top: -2px;
+  top: 50%;
+  margin-top: -2px;
 }
 .hamburger .line:nth-child(3) {
-	bottom: 0;
+  bottom: 0;
 }
 
 ul {
-	padding: 0;
-	list-style: none;
-	width: 80%;
-	margin-left: 10%;
-	position: absolute;
-	top: 10px;
+  padding: 0;
+  list-style: none;
+  width: 80%;
+  margin-left: 10%;
+  position: absolute;
+  top: 10px;
 }
 ul li {
-	color: #fff;
-	font-family: sans-serif;
-	padding: 20px 0;
+  color: #fff;
+  font-family: sans-serif;
+  padding: 20px 0;
 }
 h2 {
-	position: absolute;
-	left: 50%;
-	color: #fff;
-	margin: 0;
-	font-size: 16px;
-	font-family: sans-serif;
-	font-weight: 100;
+  position: absolute;
+  left: 50%;
+  color: #fff;
+  margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: 100;
 }
 
 /* my code */
@@ -213,7 +217,7 @@ aside {
   /* background-color: #fed057; пока неактивный правый сайдбар*/
 }
 
-.middle_screen{
+.middle_screen {
   position: absolute;
   width: 94%;
   height: 100%;
@@ -249,24 +253,26 @@ main {
   height: 100%;
 }
 
-.swiper-container{
+.swiper-container {
   height: 100%;
   z-index: -1;
 }
 
-.swiper-wrapper{
+.swiper-wrapper {
   height: 100%;
 }
 
 .logo {
-  margin: 0 auto 0 auto;
+  margin-left: 200px;
+  size: 200%;
 }
 
-.image_logo { 
+.image_logo {
   /* margin-top: -130px; это вариант для предыдущего логотипа! */
   /* height: 400px; */
-  height: 200px;
-  margin-top: -10px;
+  height: 200%;
+  margin-top: 10px;
+  margin-left: -100px;
 }
 
 .paper_drink_info {
@@ -274,7 +280,7 @@ main {
   height: 90%;
   margin: 5% auto auto auto;
   /* border: 2px solid white; */
-  border: 3px solid #fed057;
+  border: 3px solid #9900ee;
   border-radius: 5%;
 }
 
@@ -295,7 +301,7 @@ main {
   width: 100%;
 }
 
-.paper_drink_info div div{
+.paper_drink_info div div {
   height: 100%;
   width: 48%;
   display: flex;
@@ -303,28 +309,28 @@ main {
   font-weight: 500;
 }
 
-.paper_drink_info div div p{
+.paper_drink_info div div p {
   text-align: center;
   width: 100%;
 }
 
-.paper_drink_info  div div div{
+.paper_drink_info div div div {
   width: 20%;
 }
 
-.paper_drink_info div div div img{
+.paper_drink_info div div div img {
   margin-top: 45%;
   margin-left: 8%;
   height: 40%;
 }
 
-.find_drink{
+.find_drink {
   justify-content: center;
 }
 
-.find_drink button{
+.find_drink button {
   background: none;
-  border: 3px solid #fed057;
+  border: 3px solid #300362;
   width: 40%;
   height: 50%;
   border-radius: 5px;
@@ -334,7 +340,7 @@ main {
   font-weight: 700;
 }
 
-.find_drink button:hover{
+.find_drink button:hover {
   animation: button_hover 0.15s;
   animation-fill-mode: forwards;
   transition-timing-function: linear;
