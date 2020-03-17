@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
+        PrimaryDrawerItem a;
         new Drawer()
                 .withActivity(this)
                 .withToolbar(toolbar)
