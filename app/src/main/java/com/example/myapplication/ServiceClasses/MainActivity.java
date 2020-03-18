@@ -2,10 +2,13 @@ package com.example.myapplication.ServiceClasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import com.example.myapplication.GUI.MainScreen.Cockteil_Item;
@@ -30,11 +33,21 @@ public class MainActivity extends AppCompatActivity {
     private Button prevButton;
     private int selectedItemPosition = 0;
     private ArrayList<Cockteil_Item> randomCocktailList;
+    private DrawerLayout drawer;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
+
+
+
+
+        Window w= getWindow();
+        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//убрать строку состояния
 
         Toolbar toolbar = findViewById(R.id.mainScreenToolbar);
         setSupportActionBar(toolbar);
@@ -46,16 +59,17 @@ public class MainActivity extends AppCompatActivity {
                 .withActionBarDrawerToggle(true)
                 .withHeader(R.layout.drawer_header)
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_home).withIcon(FontAwesome.Icon.faw_home).withBadge("99").withIdentifier(1),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_free_play).withIcon(FontAwesome.Icon.faw_gamepad),
-                        new PrimaryDrawerItem().withName(R.string.drawer_item_custom).withIcon(FontAwesome.Icon.faw_eye).withBadge("6").withIdentifier(2),
+                        new PrimaryDrawerItem().withName(R.string.drawer_item_list).withIcon(FontAwesome.Icon.faw_list),
+                        new PrimaryDrawerItem().withName(R.string.drawer_item_add).withIcon(FontAwesome.Icon.faw_plus),
                         new SectionDrawerItem().withName(R.string.drawer_item_settings),
                         new SecondaryDrawerItem().withName(R.string.drawer_item_help).withIcon(FontAwesome.Icon.faw_cog),
                         new SecondaryDrawerItem().withName(R.string.drawer_item_open_source).withIcon(FontAwesome.Icon.faw_question).setEnabled(false),
                         new DividerDrawerItem(),
                         new SecondaryDrawerItem().withName(R.string.drawer_item_contact).withIcon(FontAwesome.Icon.faw_github).withBadge("12+").withIdentifier(1)
+
                 )
                 .build();
+
 
         randomCocktailList=new ArrayList<>();
         randomCocktailList.add(new Cockteil_Item("Cocktail",3f,R.drawable.cocktail));
