@@ -5,16 +5,20 @@
 
 @keyframes button_hover {
   from {
-    background-color: #ffffff;
+    background-color: #fce5ad;
     color: black;
   }
   35% {
-    background-color: #fce5ad;
-    color: gray;
+    background-color: #ca86ee;
+    color: #383328;
+  }
+  66% {
+    background-color: #ad52dd;
+    color: #8a774f;
   }
   to {
-    background-color: #fed057;
-    color: white;
+    background-color: #9900ee;;
+    color: #fce5ad;
   }
 }
 
@@ -280,7 +284,7 @@ main {
   height: 90%;
   margin: 5% auto auto auto;
   /* border: 2px solid white; */
-  border: 3px solid #9900ee;
+  border: 3px solid #300362;
   border-radius: 5%;
 }
 
@@ -330,7 +334,8 @@ main {
 
 .find_drink button {
   background: none;
-  border: 3px solid #300362;
+  border: 3px solid #9900ee;
+  color: #9900ee;
   width: 40%;
   height: 50%;
   border-radius: 5px;
