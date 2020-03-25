@@ -211,16 +211,6 @@ div, p {
     border: black 1px dashed;
 } */
 
-aside {
-  width: 3%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 100%;
-  margin-left: -3%;
-  /* background-color: #fed057; пока неактивный правый сайдбар*/
-}
-
 .middle_screen {
   position: absolute;
   width: 94%;

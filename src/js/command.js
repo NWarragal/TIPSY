@@ -18,8 +18,10 @@ var mySwiper = new Swiper('.swiper-container', {
 
 function showSwiper() {
     let close = document.getElementById("swiper-container");
-    function f(){
-      close.style.zIndex = 1;
+    let lefbar = document.getElementById("menu");
+    function f() {
+        close.style.zIndex = 1;
+        lefbar.style.zIndex = 2;
     }
-    setTimeout(f, 700);
-  }
+    setTimeout(f, 500);
+}
