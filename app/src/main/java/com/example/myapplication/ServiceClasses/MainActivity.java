@@ -1,3 +1,4 @@
+/*
 package com.example.myapplication.ServiceClasses;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,7 +44,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main1);
 
+            Window w= getWindow();
+        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);//убрать строку состояния
 
+        Toolbar toolbar = findViewById(R.id.mainScreenToolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
 
         Window w= getWindow();
@@ -125,3 +131,4 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+*/
