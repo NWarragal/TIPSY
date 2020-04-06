@@ -352,12 +352,12 @@ main {
 
 .drink_content{
   display: none;
-  width: 1000px;
+  width: 1500px;
   color: white;
-  height: 800px;
+  height: 900px;
   background-color: #9900ee;
   border-radius: 30px;
-  padding: 100px;
+  padding: 50px;
   display: flex;
   flex-direction: column;
 }
@@ -374,4 +374,16 @@ main {
 .description{
   width: 49%;
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.description div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.description div div p{
+  font-size: 15px;
 }
