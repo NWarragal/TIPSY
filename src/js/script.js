@@ -6,7 +6,7 @@ var params = {
     container: animContainer,
     renderer: 'svg',
     loop: false,
-    autoplay: true,
+	autoplay: true,
     animationData: animationData,
     rendererSettings: { 
         preserveAspectRatio:'none'
@@ -46,7 +46,7 @@ close.addEventListener("click", function() {
     anim.setDirection(-1);
     anim.play();
     body.classList.remove("open");
-})
+});
 
 //load menu here
 $(window).load(function() {
@@ -115,3 +115,17 @@ $(window).load(function() {
 	window.requestAnimationFrame(svgCurve);
 });
 // load menu end
+
+//user functions
+
+function showInfoDrink(){
+    anim.setDirection(1);
+    anim.play();
+    body.classList.remove("open");
+    body.classList.remove("completed");
+
+    let close = document.getElementById("swiper-container");
+    let lefbar = document.getElementById("menu");
+    close.style.zIndex = -1;
+    lefbar.style.zIndex = -1;
+}
