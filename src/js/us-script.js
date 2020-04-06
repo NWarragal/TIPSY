@@ -13,6 +13,7 @@ function showInfoDrink() { //функция открытия экрана с и�
         function waiting2() {
             loading.style.display = "none";
             drinkContent.style.display = "block";
+            drinkContent.classList.add("animatione");
         }
         setTimeout(waiting1, 200);
         setTimeout(waiting2, 2000);

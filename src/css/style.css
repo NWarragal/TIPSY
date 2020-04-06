@@ -22,6 +22,17 @@
   }
 }
 
+@keyframes show_info {
+  from {
+    margin-top: 50%;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
 /* включение разметки элементов сайта */
 /* header,
 footer,
@@ -386,4 +397,10 @@ main {
 
 .description div div p{
   font-size: 15px;
+}
+
+.animatione {
+  animation: show_info 0.5s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
 }
