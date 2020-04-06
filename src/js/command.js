@@ -5,5 +5,5 @@ function showSwiper() {
         closebar.style.zIndex = 1;
         lefbar.style.zIndex = 2;
     }
-    setTimeout(f, 1000);
+    setTimeout(f, 900);
 }

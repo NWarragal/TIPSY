@@ -143,8 +143,32 @@ function swiperMove(){
 
 function swiperMovePrev(){
 	swiperMove();
+	//setProperties(2,1,0); //образец работы функции
 }
 
 function swiperMoveNext(){
 	swiperMove();
+	//setProperties(3,4,5); //образец работы функции
+}
+
+function setProperties(first, second, third){
+	function waiting() {
+        putStars(1, first);
+		putStars(2, second);
+		putStars(3, third);
+    }
+	setTimeout(waiting, 500);
+}
+
+function putStars(numRow, numStars){
+	for(let i = 1; i <= 5; i++){
+		let num = "s" + numRow + "-" + i;
+		if(i <= numStars){
+			let img = document.getElementById(num);
+			if(img) img.setAttribute('src', "img/star-png-yellow.png");
+		} else {
+			let img = document.getElementById(num);
+			if(img) img.setAttribute('src', "img/star-png-gray.png");
+		}
+	}
 }
