@@ -45,14 +45,14 @@ function swiperMovePrev() {//обработчик свайпа влево
     swiperActive = true;
     swiperMove();
     putRandomGlass();
-    // setStarProperties(randomInteger(),randomInteger(),randomInteger()); //образец работы функции подставления звезд
+    setStarProperties(randomInteger(),randomInteger(),randomInteger()); //образец работы функции подставления звезд
 }
 
 function swiperMoveNext() {//обработчик свайпа вправо
     swiperActive = true;
     swiperMove();
     putRandomGlass();
-    // setStarProperties(randomInteger(),randomInteger(),randomInteger()); //образец работы функции подставления звезд
+    setStarProperties(randomInteger(),randomInteger(),randomInteger()); //образец работы функции подставления звезд
 }
 
 function setStarProperties(first, second, third) {//функция подмена звезд
