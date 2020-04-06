@@ -124,8 +124,27 @@ function showInfoDrink(){
     body.classList.remove("open");
     body.classList.remove("completed");
 
-    let close = document.getElementById("swiper-container");
+    let closebar = document.getElementById("swiper-container");
     let lefbar = document.getElementById("menu");
-    close.style.zIndex = -1;
+    closebar.style.zIndex = -1;
     lefbar.style.zIndex = -1;
+}
+
+function swiperMove(){
+	showInfoDrink();	
+	function waiting() {
+        anim.setDirection(-1);
+		anim.play();
+		body.classList.add("completed");
+    }
+	setTimeout(waiting, 500);
+	showSwiper();
+}
+
+function swiperMovePrev(){
+	swiperMove();
+}
+
+function swiperMoveNext(){
+	swiperMove();
 }
