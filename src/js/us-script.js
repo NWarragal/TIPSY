@@ -44,12 +44,14 @@ function swiperMove() { //функция нового свайпа с подме
 function swiperMovePrev() {//обработчик свайпа влево
     swiperActive = true;
     swiperMove();
+    putRandomGlass();
     // setStarProperties(randomInteger(),randomInteger(),randomInteger()); //образец работы функции подставления звезд
 }
 
 function swiperMoveNext() {//обработчик свайпа вправо
     swiperActive = true;
     swiperMove();
+    putRandomGlass();
     // setStarProperties(randomInteger(),randomInteger(),randomInteger()); //образец работы функции подставления звезд
 }
 
@@ -58,6 +60,45 @@ function setStarProperties(first, second, third) {//функция подмен�
         putStars(1, first);
         putStars(2, second);
         putStars(3, third);
+    }
+    setTimeout(waiting, 500);
+}
+
+function putRandomGlass() {
+    let numb = randomInteger(0, 8);
+    let filename;
+    switch (numb) {
+        case 0:
+            filename = "img/coct_blue.png";
+            break;
+        case 1:
+            filename = "img/coct_cyan.png";
+            break;
+        case 2:
+            filename = "img/coct_darkred.png";
+            break;
+        case 3:
+            filename = "img/coct_green.png";
+            break;
+        case 4:
+            filename = "img/coct_orange.png";
+            break;
+        case 5:
+            filename = "img/coct_pink.png";
+            break;
+        case 6:
+            filename = "img/coct_red.png";
+            break;
+        case 7:
+            filename = "img/coct_white.png";
+            break;
+        case 8:
+            filename = "img/coct_yellow.png";
+            break;
+    }
+    function waiting() {
+        let image_glass = document.getElementById("coctail_left");
+        if (image_glass) image_glass.setAttribute('src', filename);
     }
     setTimeout(waiting, 500);
 }
@@ -95,4 +136,4 @@ function randomInteger(min = 0, max = 5) {
     // случайное число от min до (max+1) временная функция!!!
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
-  }
+}

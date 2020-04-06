@@ -245,11 +245,9 @@ main {
 .info_left {
   width: 50%;
   height: 100%;
-  /* то что ниже удалить: это временная мера*/
-  font-weight: 100;
-  font-size: 80px;
   padding: 70px;
-  padding-top: 300px;
+  padding-top: 150px;
+  padding-left: 120px;
 }
 
 .info_right {
@@ -395,4 +393,8 @@ main {
   animation: show_info 0.5s;
   animation-fill-mode: forwards;
   transition-timing-function: linear;
+}
+
+.coctail_left{
+  width: 90%;
 }
