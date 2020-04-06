@@ -36,8 +36,9 @@ function swiperMove() { //функция нового свайпа с подме
         anim.setDirection(-1);
         anim.play();
         body.classList.add("completed");
+        body.classList.remove("open");
     }
-    setTimeout(waiting, 500);
+    setTimeout(waiting, 590);
     showSwiper();
 }
 
