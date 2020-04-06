@@ -106,7 +106,7 @@
 
 ### 2.3 Диаграмма классов<a name="2.3"></a>
 
-![img](https://github.com/LazuRR/TIPSY/blob/master/docs/mockups/class1.jpg)
+![img](https://github.com/LazuRR/TIPSY/blob/master/docs/mockups/Class1.jpg)
 
 
 ### 3. Сравнение As Is и To Be, пути улучшения архитектуры<a name="3"></a>
