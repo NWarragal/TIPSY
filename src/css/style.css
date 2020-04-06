@@ -352,7 +352,6 @@ main {
 }
 
 .drink_content{
-  display: none;
   width: 1500px;
   color: white;
   height: 900px;
@@ -361,6 +360,7 @@ main {
   padding: 50px;
   display: flex;
   flex-direction: column;
+  display: none;
 }
 
 .info_drink{
