@@ -22,6 +22,18 @@
   }
 }
 
+/* включение разметки элементов сайта */
+/* header,
+footer,
+aside,
+main{
+    border: 1px dashed black;
+}
+
+div, p {
+    border: black 1px dashed;
+} */
+
 html,
 body {
   height: 100%;
@@ -200,16 +212,6 @@ h2 {
 }
 
 /* my code */
-/* header,
-footer,
-aside,
-main{
-    border: 1px dashed black;
-}
-
-div, p {
-    border: black 1px dashed;
-} */
 
 .middle_screen {
   position: absolute;
@@ -218,7 +220,6 @@ div, p {
   top: 0;
   left: 0;
   margin-left: 3%;
-  /* color: white; */
 }
 
 header {
@@ -236,10 +237,11 @@ main {
 .info_left {
   width: 50%;
   height: 100%;
-  /* то что ниже удалить */
+  /* то что ниже удалить: это временная мера*/
   font-weight: 100;
   font-size: 80px;
   padding: 70px;
+  padding-top: 300px;
 }
 
 .info_right {
@@ -273,7 +275,6 @@ main {
   width: 80%;
   height: 90%;
   margin: 5% auto auto auto;
-  /* border: 2px solid white; */
   border: 3px solid #300362;
   border-radius: 5%;
 }
@@ -329,8 +330,6 @@ main {
   width: 40%;
   height: 50%;
   border-radius: 5px;
-  /* background-color: rgb(134, 99, 230); */
-  /* color: white; */
   font-size: 20px;
   font-weight: 700;
 }

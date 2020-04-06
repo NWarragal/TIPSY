@@ -25,15 +25,15 @@ function swiperMove(){ //функция нового свайпа с подме�
 
 function swiperMovePrev(){//обработчик свайпа влево
 	swiperMove();
-	//setProperties(2,1,0); //образец работы функции подставления звезд
+	//setStarProperties(2,1,0); //образец работы функции подставления звезд
 }
 
 function swiperMoveNext(){//обработчик свайпа вправо
 	swiperMove();
-	//setProperties(3,4,5); //образец работы функции подставления звезд
+	//setStarProperties(3,4,5); //образец работы функции подставления звезд
 }
 
-function setProperties(first, second, third){//функция подмена звезд
+function setStarProperties(first, second, third){//функция подмена звезд
 	function waiting() {
         putStars(1, first);
 		putStars(2, second);
@@ -53,4 +53,16 @@ function putStars(numRow, numStars){//функция подмена звезд �
 			if(img) img.setAttribute('src', "img/star-png-gray.png");
 		}
 	}
+}
+
+//функция сдвига левого сайдбара и блока информации о напитке вперед
+//при закрытии окна
+function showSwiper() {
+    let closebar = document.getElementById("swiper-container");
+    let lefbar = document.getElementById("menu");
+    function f() {
+        closebar.style.zIndex = 1;
+        lefbar.style.zIndex = 2;
+    }
+    setTimeout(f, 900);
 }
