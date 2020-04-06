@@ -8,14 +8,6 @@
     background-color: #fce5ad;
     color: black;
   }
-  35% {
-    background-color: #ca86ee;
-    color: #383328;
-  }
-  66% {
-    background-color: #ad52dd;
-    color: #8a774f;
-  }
   to {
     background-color: #9900ee;;
     color: #fce5ad;
@@ -351,7 +343,7 @@ main {
 }
 
 .find_drink button:hover {
-  animation: button_hover 0.15s;
+  animation: button_hover 0.3s;
   animation-fill-mode: forwards;
   transition-timing-function: linear;
   cursor: pointer;
