@@ -45,14 +45,14 @@ function swiperMovePrev() {//обработчик свайпа влево
     swiperActive = true;
     swiperMove();
     putRandomGlass();
-    setStarProperties(randomInteger(),randomInteger(),randomInteger()); //образец работы функции подставления звезд
+    setStarProperties(randomInteger(), randomInteger(), randomInteger()); //образец работы функции подставления звезд
 }
 
 function swiperMoveNext() {//обработчик свайпа вправо
     swiperActive = true;
     swiperMove();
     putRandomGlass();
-    setStarProperties(randomInteger(),randomInteger(),randomInteger()); //образец работы функции подставления звезд
+    setStarProperties(randomInteger(), randomInteger(), randomInteger()); //образец работы функции подставления звезд
 }
 
 function setStarProperties(first, second, third) {//функция подмена звезд
@@ -64,8 +64,8 @@ function setStarProperties(first, second, third) {//функция подмен�
     setTimeout(waiting, 500);
 }
 
-function putRandomGlass() {
-    let numb = randomInteger(0, 8);
+function putRandomGlass() {//рандомное изменение картинки стакана
+    let numb = randomInteger(0, 7);
     let filename;
     switch (numb) {
         case 0:
@@ -94,6 +94,9 @@ function putRandomGlass() {
             break;
         case 8:
             filename = "img/coct_yellow.png";
+            break;
+        default:
+            filename = "img/coct_cyan.png";
             break;
     }
     function waiting() {
@@ -132,8 +135,7 @@ function showSwiper() {
     setTimeout(f, 900);
 }
 
-function randomInteger(min = 0, max = 5) {
-    // случайное число от min до (max+1) временная функция!!!
+function randomInteger(min = 0, max = 4) {// случайное число от min до (max+1)
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
 }
