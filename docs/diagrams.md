@@ -97,8 +97,6 @@
   - mapper - Классы, занимающиеся пребразованием сущностей в dto.
   - exception - Наши собственные исключения.
   
-  Не очень сложные приложения, построенные на базе Spring Framework, как правило, состоят из данных пакетов. Также для них характерна иерархическая структура: ControllerClass содержит как минимум один ServiceClass и MapperClass. ServiceClass как правило один или несколько RepositoryClass и MapperClass. 
- 
 ### 2.2 Диаграмма AsIs<a name="2.2"></a>
 
 ![img](https://github.com/LazuRR/TIPSY/blob/master/docs/mockups/component.jpg)
