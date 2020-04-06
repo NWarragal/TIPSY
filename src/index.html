@@ -23,13 +23,11 @@
     </div>
     <div class="menu-inner">
       <ul>
-        <li>Family</li>
-        <li>GIFs</li>
-        <li>Images</li>
-        <li>Wallpapers</allpapers>
-        </li>
-        <li>Anime</li>
-        <li>..Other</li>
+        <li>Feedbacks</li>
+        <li>Download TIPSY for Android</li>
+        <li>About us</li>
+        <li>List of cocktails</li>
+        <li>Help me to make a coctail</li>
       </ul>
     </div>
     <svg version="1.1" id="blob" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -44,7 +42,7 @@
     </header>
     <main>
       <div class="info_left">
-        тут должен быть стакан с жидкостью
+        <img src="img/coct_red.png" id="coctail_left" class="coctail_left">
       </div>
       <div class="info_right">
         <div class="swiper-container" id="swiper-container">
@@ -91,7 +89,7 @@
                   </div>
                 </div>
                 <div class="find_drink">
-                  <button  onclick="showInfoDrink()">
+                  <button onclick="showInfoDrink()">
                     More information
                   </button>
                 </div>
@@ -110,10 +108,77 @@
   <button id="close" onclick="showSwiper()" name="close">╳</button>
   <div class="modal">
     <div class="modal__content">
-      <h1>TIPSY</h1>
-      <p>
-        Welcome to TIPSY
-      </p>
+      <div id="content_welcome">
+        <h1>TIPSY</h1>
+        <p>
+          Welcome to TIPSY!<br>
+          We provide you with information about cocktails and how to make them<br>
+          Enjoy and have a nice time!
+        </p>
+      </div>
+      <div class="loading" id="loading">
+        <h1>TIPSY is loading your cocktail, please wait...</h1>
+      </div>
+      <div class="drink_content" id="drink_content">
+        <div>
+          <h1>TIPSY drink info</h1>
+        </div>
+        <div class="info_drink">
+          <div class="image_coctail">
+            <img id="image_cocktail" src="" alt="Image of coctail">
+          </div>
+          <div class="description">
+            <div>
+              <div>
+                <h3>Name:</h3>
+              </div>
+              <div>
+                <h4>_name</h4>
+              </div>
+            </div>
+            <div>
+              <div>
+                <h3>Ingredients:</h3>
+              </div>
+              <div>
+                <p>_ingredients</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <h3>Fixtures:</h3>
+              </div>
+              <div>
+                <p>_fixtures</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <h3>Recipe:</h3>
+              </div>
+              <div>
+                <p>_recipe</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <h3>Catecory:</h3>
+              </div>
+              <div>
+                <p>_category</p>
+              </div>
+            </div>
+            <div>
+              <div>
+                <h3>Description:</h3>
+              </div>
+              <div>
+                <p>_description</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -124,7 +189,6 @@
   <script src='https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js'></script>
   <script src='https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js'></script>
   <script src="https://codepen.io/sandstedt/pen/ZOarxj.js"></script>
-  <script src="js/command.js" defer></script>
   <script src="./js/script.js"></script>
   <script src="./js/us-script.js"></script>
 </body>

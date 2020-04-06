@@ -8,19 +8,34 @@
     background-color: #fce5ad;
     color: black;
   }
-  35% {
-    background-color: #ca86ee;
-    color: #383328;
-  }
-  66% {
-    background-color: #ad52dd;
-    color: #8a774f;
-  }
   to {
     background-color: #9900ee;;
     color: #fce5ad;
   }
 }
+
+@keyframes show_info {
+  from {
+    margin-top: 50%;
+    opacity: 0;
+  }
+  to {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+/* включение разметки элементов сайта */
+/* header,
+footer,
+aside,
+main{
+    border: 1px dashed black;
+}
+
+div, p {
+    border: black 1px dashed;
+} */
 
 html,
 body {
@@ -143,6 +158,11 @@ body {
   height: 100%;
   position: relative;
 }
+
+.menu-inner ul li:hover{
+  cursor: pointer;
+}
+
 #blob {
   top: 0;
   z-index: -1;
@@ -200,16 +220,6 @@ h2 {
 }
 
 /* my code */
-/* header,
-footer,
-aside,
-main{
-    border: 1px dashed black;
-}
-
-div, p {
-    border: black 1px dashed;
-} */
 
 .middle_screen {
   position: absolute;
@@ -218,7 +228,6 @@ div, p {
   top: 0;
   left: 0;
   margin-left: 3%;
-  /* color: white; */
 }
 
 header {
@@ -236,10 +245,9 @@ main {
 .info_left {
   width: 50%;
   height: 100%;
-  /* то что ниже удалить */
-  font-weight: 100;
-  font-size: 80px;
   padding: 70px;
+  padding-top: 150px;
+  padding-left: 120px;
 }
 
 .info_right {
@@ -273,7 +281,6 @@ main {
   width: 80%;
   height: 90%;
   margin: 5% auto auto auto;
-  /* border: 2px solid white; */
   border: 3px solid #300362;
   border-radius: 5%;
 }
@@ -329,15 +336,65 @@ main {
   width: 40%;
   height: 50%;
   border-radius: 5px;
-  /* background-color: rgb(134, 99, 230); */
-  /* color: white; */
   font-size: 20px;
   font-weight: 700;
 }
 
 .find_drink button:hover {
-  animation: button_hover 0.15s;
+  animation: button_hover 0.3s;
   animation-fill-mode: forwards;
   transition-timing-function: linear;
   cursor: pointer;
+}
+
+.loading{
+  display: none;
+}
+
+.drink_content{
+  width: 1500px;
+  color: white;
+  height: 900px;
+  background-color: #9900ee;
+  border-radius: 30px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  display: none;
+}
+
+.info_drink{
+  display: flex;
+  flex-direction: row;
+}
+
+.image_coctail{
+  width: 49%;
+}
+
+.description{
+  width: 49%;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.description div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.description div div p{
+  font-size: 15px;
+}
+
+.animatione {
+  animation: show_info 0.5s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
+}
+
+.coctail_left{
+  width: 90%;
 }
