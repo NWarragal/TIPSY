@@ -44,13 +44,13 @@ function swiperMove() { //функция нового свайпа с подме
 function swiperMovePrev() {//обработчик свайпа влево
     swiperActive = true;
     swiperMove();
-    //setStarProperties(2,1,0); //образец работы функции подставления звезд
+    // setStarProperties(randomInteger(),randomInteger(),randomInteger()); //образец работы функции подставления звезд
 }
 
 function swiperMoveNext() {//обработчик свайпа вправо
     swiperActive = true;
     swiperMove();
-    //setStarProperties(3,4,5); //образец работы функции подставления звезд
+    // setStarProperties(randomInteger(),randomInteger(),randomInteger()); //образец работы функции подставления звезд
 }
 
 function setStarProperties(first, second, third) {//функция подмена звезд
@@ -90,3 +90,9 @@ function showSwiper() {
     }
     setTimeout(f, 900);
 }
+
+function randomInteger(min = 0, max = 5) {
+    // случайное число от min до (max+1) временная функция!!!
+    let rand = min + Math.random() * (max + 1 - min);
+    return Math.floor(rand);
+  }
