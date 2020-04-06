@@ -6,7 +6,7 @@ var params = {
     container: animContainer,
     renderer: 'svg',
     loop: false,
-    autoplay: true,
+	autoplay: true,
     animationData: animationData,
     rendererSettings: { 
         preserveAspectRatio:'none'
@@ -46,7 +46,7 @@ close.addEventListener("click", function() {
     anim.setDirection(-1);
     anim.play();
     body.classList.remove("open");
-})
+});
 
 //load menu here
 $(window).load(function() {
