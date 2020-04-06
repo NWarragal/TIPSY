@@ -83,9 +83,9 @@ function showSwiper() {
         closebar.style.zIndex = 1;
         lefbar.style.zIndex = 2;
         let drinkContent = document.getElementById("drink_content");
-    drinkContent.style.display = "none";
-    let welcome = document.getElementById("content_welcome");
-    welcome.style.display = "inline";
+        drinkContent.style.display = "none";
+        let welcome = document.getElementById("content_welcome");
+        welcome.style.display = "inline";
     }
     setTimeout(f, 900);
 }
