@@ -1,6 +1,7 @@
 //user functions
 let swiperActive = false;
 let numb = 6;
+let activeLink = 0;
 
 function showInfoDrink() { //функция открытия экрана с информацией о напитке
     if (!swiperActive) {
@@ -67,9 +68,9 @@ function setStarProperties(first, second, third) {//функция подмен�
 }
 
 function putRandomGlass() {//рандомное изменение картинки стакана
-    while(true){
+    while (true) {
         let n = randomInteger();
-        if(numb == n) continue;
+        if (numb == n) continue;
         numb = n;
         break;
     };
@@ -145,4 +146,49 @@ function showSwiper() {
 function randomInteger(min = 0, max = 4) {// случайное число от min до (max+1)
     let rand = min + Math.random() * (max + 1 - min);
     return Math.floor(rand);
+}
+
+function openRandomCoctail() {
+    if (activeLink != 0) {
+        let listNode = document.getElementsByTagName("li");
+        listNode[activeLink].style.fontWeight = 100;
+        listNode[0].style.fontWeight = 1000;
+        listNode[0].classList.add("max_text");
+        setTimeout(() => {listNode[0].classList.add("max_text");}, 700);
+        listNode[activeLink].classList.add("min_text");
+        activeLink = 0;
+        listNode[activeLink].classList.remove("max_text");
+        listNode[activeLink].classList.remove("min_text");
+        let drinkInfo = document.getElementsByClassName("paper_drink_info");
+        let leftArrow = document.getElementsByClassName("swiper-button-prev");
+        let rightArrow = document.getElementsByClassName("swiper-button-next");
+        drinkInfo[0].classList.remove("anim_paper_off");
+        drinkInfo[0].classList.add("anim_paper_on");
+        leftArrow[0].classList.remove("anim_arrows_off");
+        leftArrow[0].classList.add("anim_arrows_on");
+        rightArrow[0].classList.remove("anim_arrows_off");
+        rightArrow[0].classList.add("anim_arrows_on");
+    }
+}
+
+function openListCoctails() {
+    if (activeLink != 1) {
+        let listNode = document.getElementsByTagName("li");
+        listNode[activeLink].style.fontWeight = 100;
+        listNode[1].style.fontWeight = 1000;
+        setTimeout(() => {listNode[1].classList.add("max_text");}, 700);
+        listNode[activeLink].classList.add("min_text");
+        activeLink = 1;
+        listNode[activeLink].classList.remove("max_text");
+        listNode[activeLink].classList.remove("min_text");
+        let drinkInfo = document.getElementsByClassName("paper_drink_info");
+        let leftArrow = document.getElementsByClassName("swiper-button-prev");
+        let rightArrow = document.getElementsByClassName("swiper-button-next");
+        drinkInfo[0].classList.remove("anim_paper_on");
+        drinkInfo[0].classList.add("anim_paper_off");
+        leftArrow[0].classList.remove("anim_arrows_on");
+        leftArrow[0].classList.add("anim_arrows_off");
+        rightArrow[0].classList.remove("anim_arrows_on");
+        rightArrow[0].classList.add("anim_arrows_off");
+    }
 }
