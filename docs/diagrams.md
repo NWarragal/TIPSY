@@ -78,12 +78,12 @@
   - Удобство и простота использования.
   - Взаимодействие с пользователем.
   
-### 1.6 Диаграмма ToBe<a name="1.6"></a>
+### 1.6 Диаграмма To Be<a name="1.6"></a>
 ![img](https://github.com/LazuRR/TIPSY/blob/master/docs/mockups/deploy.jpg)
 
 ## 2. Анализ архитектуры<a name="2"></a>
   
-### 2.1 Диаграмма AsIs<a name="2.1"></a>
+### 2.1 Диаграмма As Is<a name="2.1"></a>
 
 ![img](https://github.com/LazuRR/TIPSY/blob/master/docs/mockups/component.jpg)
 
