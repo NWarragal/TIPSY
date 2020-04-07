@@ -1,5 +1,6 @@
 //user functions
-let swiperActive = false
+let swiperActive = false;
+let numb = 6;
 
 function showInfoDrink() { //функция открытия экрана с информацией о напитке
     if (!swiperActive) {
@@ -38,7 +39,7 @@ function swiperMove() { //функция нового свайпа с подме
         body.classList.add("completed");
         body.classList.remove("open");
     }
-    setTimeout(waiting, 590);
+    setTimeout(waiting, 500);
     showSwiper();
 }
 
@@ -66,7 +67,12 @@ function setStarProperties(first, second, third) {//функция подмен�
 }
 
 function putRandomGlass() {//рандомное изменение картинки стакана
-    let numb = randomInteger(0, 7);
+    while(true){
+        let n = randomInteger();
+        if(numb == n) continue;
+        numb = n;
+        break;
+    };
     let filename;
     switch (numb) {
         case 0:
