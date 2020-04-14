@@ -6,3 +6,4 @@
 2. [Project (web-version)](https://github.com/LazuRR/TIPSY/tree/web)
 3. [Project (Android-version)](https://github.com/LazuRR/TIPSY/tree/android)
 4. [Trello](https://trello.com/b/4Nee08CW/tipsy)
+5. [Pair programming](https://github.com/ProRitsaTel/TIPSY/tree/master/docs/Pair%20programming)
