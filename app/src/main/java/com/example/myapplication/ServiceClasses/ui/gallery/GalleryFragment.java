@@ -1,9 +1,13 @@
 package com.example.myapplication.ServiceClasses.ui.gallery;
 
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -14,14 +18,16 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.myapplication.R;
 
+
+import java.io.IOException;
+
 public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        galleryViewModel =
-                ViewModelProviders.of(this).get(GalleryViewModel.class);
+        galleryViewModel = ViewModelProviders.of(this).get(GalleryViewModel.class);
         View root = inflater.inflate(R.layout.fragment_gallery, container, false);
         final TextView textView = root.findViewById(R.id.text_gallery);
         galleryViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
@@ -30,6 +36,7 @@ public class GalleryFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
         return root;
     }
 }
