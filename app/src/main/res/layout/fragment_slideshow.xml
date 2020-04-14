@@ -6,6 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".ServiceClasses.ui.slideshow.SlideshowFragment">
 
+
+
     <TextView
         android:id="@+id/text_slideshow"
         android:layout_width="match_parent"
@@ -19,4 +21,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="153dp"
+        android:layout_height="54dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="Тёмная тема"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="66dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
