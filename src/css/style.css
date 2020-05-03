@@ -25,6 +25,79 @@
   }
 }
 
+@keyframes weigth_min {
+  from {
+    font-weight: 1000;
+  }
+  to {
+    font-weight: 100;
+  }
+}
+
+@keyframes weight_max {
+  from {
+    font-weight: 100;
+  }
+  to {
+    font-weight: 1000;
+  }
+}
+
+@keyframes paper_off {
+  from {
+    width: 80%;
+    border-radius: 5%;
+  }
+  to {
+    width: 100%;
+    border-radius: 10%;
+  }
+}
+
+@keyframes paper_on {
+  from {
+    width: 100%;
+    border-radius: 10%;
+  }
+  to {
+    width: 80%;
+    border-radius: 5%;
+  }
+}
+
+@keyframes arrows_off {
+  from {
+    z-index: 10;
+    opacity: 1;
+    display: block;
+  }
+  50%{
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+}
+
+@keyframes arrows_on {
+  from {
+    opacity: 0;
+    display: none;
+    z-index: -1;
+  }
+  50%{
+    opacity: 0;
+    display: none;
+  }
+  to {
+    opacity: 1;
+    display: block;
+    z-index: 10;
+  }
+}
 /* включение разметки элементов сайта */
 /* header,
 footer,
@@ -209,6 +282,15 @@ ul li {
   font-family: sans-serif;
   padding: 20px 0;
 }
+
+ul li:first-child{
+  font-weight: 1000;
+}
+
+ul li:nth-child(4){
+  font-weight: 1000;
+}
+
 h2 {
   position: absolute;
   left: 50%;
@@ -397,4 +479,40 @@ main {
 
 .coctail_left{
   width: 90%;
+}
+
+.max_text{
+  animation: weigth_max 1.5s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
+}
+
+.min_text{
+  animation: weigth_min 0.2s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
+}
+
+.anim_arrows_on{
+  animation: arrows_on 1s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
+}
+
+.anim_arrows_off{
+  animation: arrows_off 1s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
+}
+
+.anim_paper_on{
+  animation: paper_on 1s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
+}
+
+.anim_paper_off{
+  animation: paper_off 1s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
 }
