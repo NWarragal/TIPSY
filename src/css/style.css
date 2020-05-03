@@ -287,6 +287,10 @@ ul li:first-child{
   font-weight: 1000;
 }
 
+ul li:nth-child(4){
+  font-weight: 1000;
+}
+
 h2 {
   position: absolute;
   left: 50%;
