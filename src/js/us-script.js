@@ -2,20 +2,23 @@
 let swiperActive = false;
 let numb = 6;
 let activeLink = 0;
+let aboutUs = 0;
 
 function showInfoDrink() { //функция открытия экрана с информацией о напитке
     if (!swiperActive) {
         let welcome = document.getElementById("content_welcome");
         welcome.style.display = "none";
-        let loading = document.getElementById("loading");
-        let drinkContent = document.getElementById("drink_content");
+        let loading_coctail_title = document.getElementById("loading_coctail_title");
+        let card_page = document.getElementById("loaded_block");
+        let useless_div = document.getElementById("about_title");
+        useless_div.style.display = "none";
         function waiting1() {
-            loading.style.display = "inline";
+            loading_coctail_title.style.display = "inline";
         }
         function waiting2() {
-            loading.style.display = "none";
-            drinkContent.style.display = "block";
-            drinkContent.classList.add("animatione");
+            loading_coctail_title.style.display = "none";
+            card_page.style.display = "block";
+            card_page.classList.add("animatione");
         }
         setTimeout(waiting1, 200);
         setTimeout(waiting2, 2000);
@@ -135,8 +138,8 @@ function showSwiper() {
     function f() {
         closebar.style.zIndex = 1;
         lefbar.style.zIndex = 2;
-        let drinkContent = document.getElementById("drink_content");
-        drinkContent.style.display = "none";
+        let card_page = document.getElementById("drink_content");
+        card_page.style.display = "none";
         let welcome = document.getElementById("content_welcome");
         welcome.style.display = "inline";
     }
@@ -191,4 +194,37 @@ function openListCoctails() {
         rightArrow[0].classList.remove("anim_arrows_on");
         rightArrow[0].classList.add("anim_arrows_off");
     }
+}
+
+function showAboutUs() { //функция открытия экрана с информацией о нас
+    if (aboutUs != 1) {
+        let welcome = document.getElementById("content_welcome");
+        welcome.style.display = "none";
+        let loading_card_title = document.getElementById("loading_card_title");
+        let card_page = document.getElementById("loaded_block");
+        let useless_div = document.getElementById("coctail_info");
+        useless_div.style.display = "none";
+        function waiting1() {
+            loading_card_title.style.display = "inline";
+        }
+        
+        function waiting2() {
+            loading_card_title.style.display = "none";
+            card_page.style.display = "block";
+            card_page.classList.add("animatione");
+        }
+        setTimeout(waiting1, 200);
+        setTimeout(waiting2, 2000);
+    }
+
+    anim.setDirection(1);
+    anim.play();
+    body.classList.remove("open");
+    body.classList.remove("completed");
+
+    let closebar = document.getElementById("swiper-container");
+    let lefbar = document.getElementById("menu");
+    closebar.style.zIndex = -1;
+    lefbar.style.zIndex = -1;
+    swiperActive = false;
 }
