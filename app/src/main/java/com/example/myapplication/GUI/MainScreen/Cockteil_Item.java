@@ -3,20 +3,20 @@ package com.example.myapplication.GUI.MainScreen;
 public class Cockteil_Item {
 
     String cocktailName;
-    Float cocktailRating;
+    int cocktailRating;
     int cocktailImage;
 
-    public Cockteil_Item(String cocktailName, Float cocktailRating, int cocktailImage) {
+    public Cockteil_Item(String cocktailName, int cocktailRating, int cocktailImage) {
         this.cocktailName = cocktailName;
         this.cocktailRating = cocktailRating;
         this.cocktailImage = cocktailImage;
     }
-
+   
     public String getCocktailName() {
         return cocktailName;
     }
 
-    public Float getCocktailRating() {
+    public int getCocktailRating() {
         return cocktailRating;
     }
 
@@ -28,7 +28,7 @@ public class Cockteil_Item {
         this.cocktailName = cocktailName;
     }
 
-    public void setCocktailRating(Float cocktailRating) {
+    public void setCocktailRating(int cocktailRating) {
         this.cocktailRating = cocktailRating;
     }
 

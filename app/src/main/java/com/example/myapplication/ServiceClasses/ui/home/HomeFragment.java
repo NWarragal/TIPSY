@@ -42,11 +42,11 @@ public class HomeFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_home, container, false);
 
         randomCocktailList=new ArrayList<>();
-        randomCocktailList.add(new Cockteil_Item("Cocktail",3f,R.drawable.cocktail));
-        randomCocktailList.add(new Cockteil_Item("Cocktail",4f,R.drawable.cocktail1));
-        randomCocktailList.add(new Cockteil_Item("Cocktail",3.5f,R.drawable.cocktail2));
-        randomCocktailList.add(new Cockteil_Item("Cocktail",2f,R.drawable.cocktail3));
-        randomCocktailList.add(new Cockteil_Item("Cocktail",5f,R.drawable.cocktail4));
+        randomCocktailList.add(new Cockteil_Item("Cocktail",3,R.drawable.cocktail));
+        randomCocktailList.add(new Cockteil_Item("Cocktail",4,R.drawable.cocktail1));
+        randomCocktailList.add(new Cockteil_Item("Cocktail",3,R.drawable.cocktail2));
+        randomCocktailList.add(new Cockteil_Item("Cocktail",2,R.drawable.cocktail3));
+        randomCocktailList.add(new Cockteil_Item("Cocktail",5,R.drawable.cocktail4));
 
         mainScreenPager=root.findViewById(R.id.mainScreenViewPager);
         mainScreenPagerAdapter=new MainScreenPagerAdapter(this.getContext(),randomCocktailList);
@@ -91,4 +91,8 @@ public class HomeFragment extends Fragment {
         });
         return root;
     }
+
+
+
+
 }
