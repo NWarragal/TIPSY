@@ -36,7 +36,12 @@ anim.addEventListener("complete", function() {
 close.addEventListener("click", function() {
     anim.setDirection(-1);
     anim.play();
-    body.classList.remove("open");
+	body.classList.remove("open");
+	let card_page = document.getElementById("loaded_block");	
+	function waiting1() {
+		card_page.style.display = "none";
+	}
+	setTimeout(waiting1, 200);
 });
 
 //load menu here

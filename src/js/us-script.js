@@ -10,12 +10,14 @@ function showInfoDrink() { //функция открытия экрана с и�
         welcome.style.display = "none";
         let loading_coctail_title = document.getElementById("loading_coctail_title");
         let card_page = document.getElementById("loaded_block");
-        let useless_div = document.getElementById("about_title");
-        useless_div.style.display = "none";
+        let about_div = document.getElementById("about_title");
+        let coctail_info = document.getElementById("coctail_info");
         function waiting1() {
             loading_coctail_title.style.display = "inline";
         }
         function waiting2() {
+            about_div.style.display = "none";
+            coctail_info.style.display = "block";
             loading_coctail_title.style.display = "none";
             card_page.style.display = "block";
             card_page.classList.add("animatione");
@@ -203,12 +205,14 @@ function showAboutUs() { //функция открытия экрана с ин�
         let loading_card_title = document.getElementById("loading_card_title");
         let card_page = document.getElementById("loaded_block");
         let useless_div = document.getElementById("coctail_info");
-        useless_div.style.display = "none";
+        let about_div = document.getElementById("about_title");
         function waiting1() {
             loading_card_title.style.display = "inline";
         }
         
         function waiting2() {
+            about_title.style.display = "block";
+            useless_div.style.display = "none";
             loading_card_title.style.display = "none";
             card_page.style.display = "block";
             card_page.classList.add("animatione");
