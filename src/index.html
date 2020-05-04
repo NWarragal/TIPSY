@@ -26,8 +26,7 @@
         <li onclick="openRandomCoctail()">Случайный коктейль</li>
         <li onclick="openListCoctails()">Список коктейлей</li>
         <li></li>
-        <li>Как сделать коктейль</li>
-        <li>Написать отзыв</li>  
+        <li>Как сделать коктейль</li>  
         <li onclick="showAboutUs()">О нас</li>
       </ul>
     </div>
@@ -50,8 +49,8 @@
           <div class="swiper-wrapper">
             <div class="swiper-slide">
               <div class="paper_drink_info">
-                <div class="name_drink">
-                  <p>_NAME</p>
+                <div class="name_drink" >
+                  <p id="name_drink">Коктейль</p>
                 </div>
                 <div class="first_property">
                   <div>
@@ -203,7 +202,11 @@
   <script src="https://codepen.io/sandstedt/pen/ZOarxj.js"></script>
   <script src="./js/script.js"></script>
   <script src="./js/us-script.js"></script>
+  <script src="./js/db-script.js"></script>
   <script src="./db/info.js"></script>
+  <script async>
+    onStart();
+  </script>
 </body>
 
 </html>

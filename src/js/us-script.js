@@ -3,6 +3,15 @@ let swiperActive = false;
 let numb = 6;
 let activeLink = 0;
 let aboutUs = 0;
+let msNumb;
+let currentPos;
+
+
+function onStart() {
+    msNumb = createRandMs();
+    currentPos = randomInteger(0, msNumb.length - 1);
+    setInfoDrink();
+}
 
 function showInfoDrink() { //функция открытия экрана с информацией о напитке
     if (!swiperActive) {
@@ -53,14 +62,28 @@ function swiperMovePrev() {//обработчик свайпа влево
     swiperActive = true;
     swiperMove();
     putRandomGlass();
-    setStarProperties(randomInteger(), randomInteger(), randomInteger()); //образец работы функции подставления звезд
+    currentPos--;
+    setInfoDrink();
 }
 
 function swiperMoveNext() {//обработчик свайпа вправо
     swiperActive = true;
     swiperMove();
     putRandomGlass();
-    setStarProperties(randomInteger(), randomInteger(), randomInteger()); //образец работы функции подставления звезд
+    currentPos++;
+    setInfoDrink();
+}
+
+function setInfoDrink() {
+    if (!msNumb) msNumb = createRandMs();
+    if (!currentPos) currentPos = randomInteger(0, msNumb.length - 1);
+    let information = getNameAndRating(msNumb[currentPos]);
+    let name = document.getElementById("name_drink");
+    function waiting1() {
+        name.textContent = information[0];
+        setStarProperties(information[1], information[2], information[3]);
+    }
+    setTimeout(waiting1, 200);
 }
 
 function setStarProperties(first, second, third) {//функция подмена звезд
@@ -137,12 +160,10 @@ function putStars(numRow, numStars) {//функция подмена звезд 
 function showSwiper() {
     let closebar = document.getElementById("swiper-container");
     let lefbar = document.getElementById("menu");
+    let welcome = document.getElementById("content_welcome");
     function f() {
         closebar.style.zIndex = 1;
         lefbar.style.zIndex = 2;
-        let card_page = document.getElementById("drink_content");
-        card_page.style.display = "none";
-        let welcome = document.getElementById("content_welcome");
         welcome.style.display = "inline";
     }
     setTimeout(f, 900);
