@@ -3,14 +3,37 @@
   box-sizing: border-box;
 }
 
+/* включение разметки элементов сайта */
+/* header,
+footer,
+aside,
+main{
+    border: 1px dashed black;
+}
+
+div, p {
+    border: black 1px dashed;
+} */
+
+@keyframes button_hover_help {
+  from {
+    background-color: #fff;
+    color: #9900ee;
+  }
+  to {
+    background-color: #9900ee;;
+    color: #fff;
+  }
+}
+
 @keyframes button_hover {
   from {
-    background-color: #fce5ad;
+    background-color: #fff;
     color: black;
   }
   to {
     background-color: #9900ee;;
-    color: #fce5ad;
+    color: #fff;
   }
 }
 
@@ -22,24 +45,6 @@
   to {
     margin-top: 0;
     opacity: 1;
-  }
-}
-
-@keyframes weigth_min {
-  from {
-    font-weight: 1000;
-  }
-  to {
-    font-weight: 100;
-  }
-}
-
-@keyframes weight_max {
-  from {
-    font-weight: 100;
-  }
-  to {
-    font-weight: 1000;
   }
 }
 
@@ -98,17 +103,6 @@
     z-index: 10;
   }
 }
-/* включение разметки элементов сайта */
-/* header,
-footer,
-aside,
-main{
-    border: 1px dashed black;
-}
-
-div, p {
-    border: black 1px dashed;
-} */
 
 html,
 body {
@@ -280,15 +274,12 @@ ul {
 ul li {
   color: #fff;
   font-family: sans-serif;
-  padding: 20px 0;
+  padding: 20px 5px;
+  transition-duration: 0.1s;
 }
 
-ul li:first-child{
-  font-weight: 1000;
-}
-
-ul li:nth-child(4){
-  font-weight: 1000;
+.hover:hover{
+  border-left: 5px solid #fff;
 }
 
 h2 {
@@ -371,6 +362,30 @@ main {
   width: 100%;
   height: 20%;
   display: flex;
+  justify-content: center;
+}
+
+.list_drink{
+  overflow: auto;
+  padding: 10px;
+}
+
+.list_drink div{
+  width: 100% !important;
+  height: 70px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list_drink div p{
+  cursor: pointer;
+  padding: 5px;
+}
+
+.active_list{
+  border: 2px solid #300362;
+  border-radius: 4px;
 }
 
 .name_drink {
@@ -455,14 +470,21 @@ main {
 }
 
 .image_coctail{
-  width: 49%;
+  width: 50%;
+  background-color: #fff;
 }
 
 .description{
-  width: 49%;
+  width: 50%;
   font-size: 20px;
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  height: 500px;
+  background-color: #fff;
+  color: black;
+  /* margin-top: 20px; */
+  padding: 20px;
 }
 
 .description div{
@@ -471,8 +493,22 @@ main {
   align-items: center;
 }
 
+.topbot{
+  border-bottom: 1px solid black;
+}
+
+.onlytop{
+  border-top: 1px solid black;
+}
+
+.description div div{
+  width: 50%;
+}
+
 .description div div p{
+  text-align: left;
   font-size: 15px;
+  font-weight: 600;
 }
 
 .animatione {
@@ -486,15 +522,11 @@ main {
 }
 
 .max_text{
-  animation: weigth_max 1.5s;
-  animation-fill-mode: forwards;
-  transition-timing-function: linear;
+  border-left: 5px solid #fff;
 }
 
 .min_text{
-  animation: weigth_min 0.2s;
-  animation-fill-mode: forwards;
-  transition-timing-function: linear;
+  border-left: none;
 }
 
 .anim_arrows_on{
@@ -519,4 +551,98 @@ main {
   animation: paper_off 1s;
   animation-fill-mode: forwards;
   transition-timing-function: linear;
+}
+
+.image_coctail img{
+  width: 100px !important;
+  padding-top: 50px;
+  align-items: center;
+}
+
+.help{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info_help{
+  background-color: #fff;
+  margin: 2%;
+  color: black;
+  width: 96%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  font-weight: 600;
+}
+
+.info_help div{
+  width: 50%;
+  height: 100%;
+}
+
+.image_quest{
+  margin-top: 100px;
+  width: 200px;
+}
+
+.scroll_info{
+  overflow: auto;
+  display: block;
+}
+
+.scroll_info div{
+  width: 100%;
+  height: 50px;
+}
+
+.scroll_info div button{
+  background: none;
+  border: 3px solid #9900ee;
+  color: #9900ee;
+  height: 90%;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.scroll_info div button:hover {
+  animation: button_hover_help 0.3s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
+  cursor: pointer;
+}
+
+.info_help_text{
+  display: none;
+  overflow: auto;
+  padding: 10px;
+  text-align: left;
+}
+
+.info_help_text button{
+  background: none;
+  border: 3px solid #9900ee;
+  color: #9900ee;
+  height: 50px;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.info_help_text p{
+  display: none;
+}
+
+.info_help_text button:hover {
+  animation: button_hover_help 0.3s;
+  animation-fill-mode: forwards;
+  transition-timing-function: linear;
+  cursor: pointer;
+}
+
+.a{
+  color: red;
 }
