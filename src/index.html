@@ -28,8 +28,8 @@
         <li></li>
         <li>Cocktail glass</li>
         <li>Help me to make a cocktail</li>
-        <li>Feedbacks</li>
-        <li>About us</li>    
+        <li>Feedbacks</li>  
+        <li onclick="showAboutUs()">About us</li>
       </ul>
     </div>
     <svg version="1.1" id="blob" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -118,69 +118,80 @@
           Enjoy and have a nice time!
         </p>
       </div>
-      <div class="loading" id="loading">
+
+      <div class="loading_coctail_title" id="loading_coctail_title">
         <h1>TIPSY is loading your cocktail, please wait...</h1>
       </div>
-      <div class="drink_content" id="drink_content">
-        <div>
-          <h1>TIPSY drink info</h1>
+      <div class="loading_card_title" id="loading_card_title">
+        <h1>TIPSY is loading your page, please wait...</h1>
+      </div>
+      <div class="loaded_block" id="loaded_block">
+        <div class = "coctail_info" id="coctail_info">
+          <div>
+            <h1>TIPSY drink info</h1>
+          </div>
+          <div class="info_drink">
+            <div class="image_coctail">
+              <img id="image_cocktail" src="" alt="Image of coctail">
+            </div>
+            <div class="description">
+              <div>
+                <div>
+                  <h3>Name:</h3>
+                </div>
+                <div>
+                  <h4>_name</h4>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h3>Ingredients:</h3>
+                </div>
+                <div>
+                  <p>_ingredients</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h3>Fixtures:</h3>
+                </div>
+                <div>
+                  <p>_fixtures</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h3>Recipe:</h3>
+                </div>
+                <div>
+                  <p>_recipe</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h3>Catecory:</h3>
+                </div>
+                <div>
+                  <p>_category</p>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <h3>Description:</h3>
+                </div>
+                <div>
+                  <p>_description</p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="info_drink">
-          <div class="image_coctail">
-            <img id="image_cocktail" src="" alt="Image of coctail">
-          </div>
-          <div class="description">
-            <div>
-              <div>
-                <h3>Name:</h3>
-              </div>
-              <div>
-                <h4>_name</h4>
-              </div>
-            </div>
-            <div>
-              <div>
-                <h3>Ingredients:</h3>
-              </div>
-              <div>
-                <p>_ingredients</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <h3>Fixtures:</h3>
-              </div>
-              <div>
-                <p>_fixtures</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <h3>Recipe:</h3>
-              </div>
-              <div>
-                <p>_recipe</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <h3>Catecory:</h3>
-              </div>
-              <div>
-                <p>_category</p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <h3>Description:</h3>
-              </div>
-              <div>
-                <p>_description</p>
-              </div>
-            </div>
-          </div>
+        <div id="about_title" class="about_title">
+          <p>Hello World</p>
         </div>
       </div>
+
+
     </div>
   </div>
 

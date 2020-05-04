@@ -429,14 +429,18 @@ main {
   cursor: pointer;
 }
 
-.loading{
+.loading_coctail_title{
   display: none;
 }
 
-.drink_content{
+.loading_card_title{
+  display: none;
+}
+
+.loaded_block{
   width: 1500px;
   color: white;
-  height: 900px;
+  height: 700px;
   background-color: #9900ee;
   border-radius: 30px;
   padding: 50px;
