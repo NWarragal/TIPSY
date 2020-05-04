@@ -12,6 +12,10 @@ function onStart() {
     msNumb = createRandMs();
     currentPos = randomInteger(0, msNumb.length - 1);
     setInfoDrink();
+    let list = document.getElementsByClassName("list_drink");
+    list[0].style.display = "none";
+    list[0].style.width = "100%";
+    list[0].style.height = "60%";
 }
 
 function showInfoDrink() { //функция открытия экрана с информацией о напитке
@@ -190,12 +194,38 @@ function openRandomCoctail() {
         let drinkInfo = document.getElementsByClassName("paper_drink_info");
         let leftArrow = document.getElementsByClassName("swiper-button-prev");
         let rightArrow = document.getElementsByClassName("swiper-button-next");
+        let first_property = document.getElementsByClassName("first_property");
+        let second_property = document.getElementsByClassName("second_property");
+        let third_property = document.getElementsByClassName("third_property");
+        let list = document.getElementsByClassName("list_drink");
+        let name = document.getElementById("name_drink");
         drinkInfo[0].classList.remove("anim_paper_off");
         drinkInfo[0].classList.add("anim_paper_on");
         leftArrow[0].classList.remove("anim_arrows_off");
         leftArrow[0].classList.add("anim_arrows_on");
         rightArrow[0].classList.remove("anim_arrows_off");
         rightArrow[0].classList.add("anim_arrows_on");
+        list[0].classList.remove("anim_arrows_on");
+        list[0].classList.add("anim_arrows_off");
+        name.classList.remove("anim_arrows_on");
+        name.classList.add("anim_arrows_off");
+        function waiting2() {
+            first_property[0].classList.remove("anim_arrows_off");
+            first_property[0].classList.add("anim_arrows_on");
+            second_property[0].classList.remove("anim_arrows_off");
+            second_property[0].classList.add("anim_arrows_on");
+            third_property[0].classList.remove("anim_arrows_off");
+            third_property[0].classList.add("anim_arrows_on");
+            first_property[0].style.display = "flex";
+            second_property[0].style.display = "flex";
+            third_property[0].style.display = "flex";
+            list[0].style.display = "none";
+            name.classList.remove("anim_arrows_off");
+            name.classList.add("anim_arrows_on");
+            let ms = getNameAndRating(msNumb[currentPos]);
+            name.textContent = ms[0];
+        }
+        setTimeout(waiting2, 500);
     }
 }
 
@@ -210,12 +240,37 @@ function openListCoctails() {
         let drinkInfo = document.getElementsByClassName("paper_drink_info");
         let leftArrow = document.getElementsByClassName("swiper-button-prev");
         let rightArrow = document.getElementsByClassName("swiper-button-next");
+        let first_property = document.getElementsByClassName("first_property");
+        let second_property = document.getElementsByClassName("second_property");
+        let third_property = document.getElementsByClassName("third_property");
+        let list = document.getElementsByClassName("list_drink");
+        let name = document.getElementById("name_drink");
         drinkInfo[0].classList.remove("anim_paper_on");
         drinkInfo[0].classList.add("anim_paper_off");
         leftArrow[0].classList.remove("anim_arrows_on");
         leftArrow[0].classList.add("anim_arrows_off");
         rightArrow[0].classList.remove("anim_arrows_on");
         rightArrow[0].classList.add("anim_arrows_off");
+        first_property[0].classList.remove("anim_arrows_on");
+        first_property[0].classList.add("anim_arrows_off");
+        second_property[0].classList.remove("anim_arrows_on");
+        second_property[0].classList.add("anim_arrows_off");
+        third_property[0].classList.remove("anim_arrows_on");
+        third_property[0].classList.add("anim_arrows_off");
+        name.classList.remove("anim_arrows_on");
+        name.classList.add("anim_arrows_off");
+        function waiting2() {
+            list[0].classList.remove("anim_arrows_off");
+            list[0].classList.add("anim_arrows_on");
+            first_property[0].style.display = "none";
+            second_property[0].style.display = "none";
+            third_property[0].style.display = "none";
+            list[0].style.display = "flex";
+            name.textContent = "Выберите коктейль";
+            name.classList.remove("anim_arrows_off");
+            name.classList.add("anim_arrows_on");
+        }
+        setTimeout(waiting2, 500);
     }
 }
 
