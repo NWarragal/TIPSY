@@ -8,3 +8,4 @@
 5. [Trello](https://trello.com/b/4Nee08CW/tipsy)
 6. [Pair programming](https://github.com/LazuRR/TIPSY/tree/master/docs/Pair%20programming)
 7. [Technical debt](https://github.com/LazuRR/TIPSY/tree/master/docs/Technical%20debt)
+8. [UX improvment](https://github.com/LazuRR/TIPSY/tree/master/docs/UX%20improvement)
