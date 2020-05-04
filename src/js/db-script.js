@@ -3,7 +3,7 @@ function createRandMs() {
     for (let i = 0; i < info.length; i++) {
         ms[i] = i;
     }
-    for(let i = 0; i < 1000; i++){
+    for (let i = 0; i < 1000; i++) {
         let o = randomInteger(0, info.length - 1);
         let u = randomInteger(0, info.length - 1);
         [ms[o], ms[u]] = [ms[u], ms[o]];
@@ -20,21 +20,25 @@ function getNameAndRating(num) {
     return ms;
 }
 
-function getAllInfo(num){
+function getAllInfo(num) {
     let ms = [];
     ms[1] = "";
     ms[2] = "";
     ms[0] = "  " + info[num][0]["Название"];
-    for(let i = 0; i < info[num].length; i++){
-        ms[1] += info[num][i]["Ингредиенты"] + ": ";
-        ms[1] += info[num][i]["Обьем ингредиентов"];
-        ms[1] += info[num][i]["мера ингредиентов"] + "\n";
+    for (let i = 0; i < info[num].length; i++) {
+        if (info[num][i]["Ингредиенты"]) {
+            ms[1] += info[num][i]["Ингредиенты"] + ": ";
+            ms[1] += info[num][i]["Обьем ингредиентов"];
+            ms[1] += info[num][i]["мера ингредиентов"] + "\n";
+        }
     }
     ms[1] = ms[1].split("\n");
     ms[1] = ms[1].join("<br>");
-    for(let i = 0; i < info[num].length; i++){
-        ms[2] += info[num][i]["Приспособления"] + ": ";
-        ms[2] += info[num][i]["количество приспособлений"] + "\n";
+    for (let i = 0; i < info[num].length; i++) {
+        if (info[num][i]["Приспособления"]) {
+            ms[2] += info[num][i]["Приспособления"] + ": ";
+            ms[2] += info[num][i]["количество приспособлений"] + "\n";
+        }
     }
     ms[2] = ms[2].split("\n");
     ms[2] = ms[2].join(" <br>");
@@ -46,9 +50,9 @@ function getAllInfo(num){
     return ms;
 }
 
-function getAllNames(){
+function getAllNames() {
     let ms = [];
-    for(let i = 0; i < info.length; i++){
+    for (let i = 0; i < info.length; i++) {
         ms[i] = info[i][0]["Название"];
     }
     return ms;
