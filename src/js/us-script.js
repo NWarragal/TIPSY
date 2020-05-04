@@ -336,7 +336,7 @@ function showAboutUs() { //функция открытия экрана с ин�
             card_page.classList.add("animatione");
         }
         setTimeout(waiting1, 200);
-        setTimeout(waiting2, randomInteger(0, 20) * 100);
+        setTimeout(waiting2, randomInteger(3, 15) * 100);
     }
 
     anim.setDirection(1);
@@ -372,7 +372,7 @@ function showHelp() { //функция открытия экрана с экра
             card_page.classList.add("animatione");
         }
         setTimeout(waiting1, 200);
-        setTimeout(waiting2, randomInteger(0, 20) * 100);
+        setTimeout(waiting2, randomInteger(3, 15) * 100);
     }
 
     anim.setDirection(1);
