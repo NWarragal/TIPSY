@@ -356,6 +356,25 @@ main {
 
 .list_drink{
   overflow: auto;
+  padding: 10px;
+}
+
+.list_drink div{
+  width: 100% !important;
+  height: 70px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list_drink div p{
+  cursor: pointer;
+  padding: 5px;
+}
+
+.active_list{
+  border: 2px solid #300362;
+  border-radius: 4px;
 }
 
 .name_drink {

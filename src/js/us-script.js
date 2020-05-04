@@ -6,12 +6,13 @@ let aboutUs = 0;
 let help = 0;
 let msNumb;
 let currentPos;
-
+let chosenItem = -1;
 
 function onStart() {
     msNumb = createRandMs();
     currentPos = randomInteger(0, msNumb.length - 1);
     setInfoDrink();
+    fillDrinkList();
     let list = document.getElementsByClassName("list_drink");
     list[0].style.display = "none";
     list[0].style.width = "100%";
@@ -19,6 +20,19 @@ function onStart() {
 }
 
 function showInfoDrink() { //функция открытия экрана с информацией о напитке
+    if (activeLink == 0) {
+        openWindowDrink();
+        setFullInfoDrink(msNumb[currentPos]);
+    }
+    if(activeLink == 1){
+        if(chosenItem != -1){
+            openWindowDrink();
+            setFullInfoDrink(chosenItem);
+        }
+    }
+}
+
+function openWindowDrink(){
     if (!swiperActive) {
         let welcome = document.getElementById("content_welcome");
         welcome.style.display = "none";
@@ -51,7 +65,6 @@ function showInfoDrink() { //функция открытия экрана с и�
     closebar.style.zIndex = -1;
     lefbar.style.zIndex = -1;
     swiperActive = false;
-    setFullInfoDrink(msNumb[currentPos]);
 }
 
 function swiperMove() { //функция нового свайпа с подменой информации под ним(не готово пока)
@@ -265,7 +278,7 @@ function openListCoctails() {
             first_property[0].style.display = "none";
             second_property[0].style.display = "none";
             third_property[0].style.display = "none";
-            list[0].style.display = "flex";
+            list[0].style.display = "block";
             name.textContent = "Выберите коктейль";
             name.classList.remove("anim_arrows_off");
             name.classList.add("anim_arrows_on");
@@ -382,4 +395,26 @@ function setFullInfoDrink(curr) {
     let photoname = './db/cockt/' + (curr + 1) + '.jpg'
     image_cocktail.setAttribute('src', photoname);
     image_cocktail.style.width = "30%";
+}
+
+function fillDrinkList() {
+    let list = document.getElementsByClassName("list_drink");
+    let ms = getAllNames();
+    for (let i = 0; i < ms.length; i++) {
+        let p = document.createElement("p");
+        p.textContent = ms[i];
+        p.addEventListener("click", function () {
+            let pms = p.parentNode.parentNode.getElementsByTagName('p');
+            for (let i = 0; i < pms.length; i++) {
+                pms[i].classList.remove("active_list");
+            }
+            p.classList.add("active_list");
+            let num = p.parentNode.getAttribute('name');
+            chosenItem = parseInt(num.match(/\d+/));
+        });
+        let div = document.createElement("div");
+        div.setAttribute('name', 's' + i);
+        div.appendChild(p);
+        list[0].appendChild(div);
+    }
 }

@@ -45,3 +45,11 @@ function getAllInfo(num){
     ms[5] = info[num][0]["Описание"];
     return ms;
 }
+
+function getAllNames(){
+    let ms = [];
+    for(let i = 0; i < info.length; i++){
+        ms[i] = info[i][0]["Название"];
+    }
+    return ms;
+}
