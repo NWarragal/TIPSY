@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100);
 * {
   box-sizing: border-box;
+  resize: none;
 }
 
 /* включение разметки элементов сайта */
@@ -28,12 +29,12 @@ div, p {
 
 @keyframes button_hover {
   from {
-    background-color: #fff;
+    background-color: #fce5ad;
     color: black;
   }
   to {
     background-color: #9900ee;;
-    color: #fff;
+    color: #fce5ad;
   }
 }
 
@@ -467,11 +468,12 @@ main {
 .info_drink{
   display: flex;
   flex-direction: row;
+  background-color: #fff;
+  border-radius: 10px;
 }
 
 .image_coctail{
   width: 50%;
-  background-color: #fff;
 }
 
 .description{
@@ -480,8 +482,7 @@ main {
   display: flex;
   flex-direction: column;
   overflow: auto;
-  height: 500px;
-  background-color: #fff;
+  height: 500px; 
   color: black;
   /* margin-top: 20px; */
   padding: 20px;
@@ -567,6 +568,7 @@ main {
 
 .info_help{
   background-color: #fff;
+  border-radius: 10px;
   margin: 2%;
   color: black;
   width: 96%;
@@ -645,4 +647,75 @@ main {
 
 .a{
   color: red;
+}
+
+.list_drink::-webkit-scrollbar {
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.list_drink::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #9900ee;
+}
+
+.list_drink::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.scroll_info::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.scroll_info::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: black;
+}
+
+.scroll_info::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.info_help_text::-webkit-scrollbar {
+  width: 12px;
+  border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.info_help_text::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: black;
+}
+
+.info_help_text::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.description::-webkit-scrollbar {
+	width: 12px;
+  background-color: #F5F5F5;
+  border-radius: 10px;
+}
+
+.description::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: black;
+}
+
+.description::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
 }
