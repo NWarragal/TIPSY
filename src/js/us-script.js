@@ -7,6 +7,7 @@ let help = 0;
 let msNumb;
 let currentPos;
 let chosenItem = -1;
+let activeText;
 
 function onStart() {
     msNumb = createRandMs();
@@ -17,6 +18,33 @@ function onStart() {
     list[0].style.display = "none";
     list[0].style.width = "100%";
     list[0].style.height = "60%";
+
+    for (let i = 0; i < 18; i++) {
+        let but = document.getElementById(i + "");
+        but.addEventListener('click', function () {
+            activeText = i;
+            let info = document.getElementsByClassName('scroll_info');
+            let text = document.getElementsByClassName('info_help_text');
+            let check = document.getElementById(i + "s");
+            let img = document.getElementById("image_quest");
+            let src = './img/' + (i + 1) + 's.jpg'
+            info[0].classList.remove("anim_arrows_on");
+            info[0].classList.add("anim_arrows_off");
+            img.classList.remove("anim_arrows_on");
+            img.classList.add("anim_arrows_off");
+            function waiting2() {
+                info[0].style.display = "none";
+                check.style.display = "inline";
+                img.setAttribute('src', src);
+                text[0].classList.remove("anim_arrows_off");
+                text[0].classList.add("anim_arrows_on");
+                text[0].style.display = "block";
+                img.classList.remove("anim_arrows_off");
+                img.classList.add("anim_arrows_on");
+            }
+            setTimeout(waiting2, 500);
+        });
+    }
 }
 
 function showInfoDrink() { //функция открытия экрана с информацией о напитке
@@ -24,15 +52,15 @@ function showInfoDrink() { //функция открытия экрана с и�
         openWindowDrink();
         setFullInfoDrink(msNumb[currentPos]);
     }
-    if(activeLink == 1){
-        if(chosenItem != -1){
+    if (activeLink == 1) {
+        if (chosenItem != -1) {
             openWindowDrink();
             setFullInfoDrink(chosenItem);
         }
     }
 }
 
-function openWindowDrink(){
+function openWindowDrink() {
     if (!swiperActive) {
         let welcome = document.getElementById("content_welcome");
         welcome.style.display = "none";
@@ -417,4 +445,27 @@ function fillDrinkList() {
         div.appendChild(p);
         list[0].appendChild(div);
     }
+}
+
+function getBack() {
+    let info = document.getElementsByClassName('scroll_info');
+    let text = document.getElementsByClassName('info_help_text');
+    let check = document.getElementById(activeText + "s");
+    let img = document.getElementById("image_quest");
+    text[0].classList.remove("anim_arrows_on");
+    text[0].classList.add("anim_arrows_off");
+    img.classList.remove("anim_arrows_on");
+    img.classList.add("anim_arrows_off");
+    function waiting2() {
+        img.setAttribute('src', './img/question.jpg');
+        info[0].style.display = "block";
+        check.style.display = "none";
+        info[0].classList.remove("anim_arrows_off");
+        info[0].classList.add("anim_arrows_on");
+        img.classList.remove("anim_arrows_off");
+        img.classList.add("anim_arrows_on");
+        text[0].style.display = "none";
+    }
+    setTimeout(waiting2, 500);
+    activeText = 0;
 }
