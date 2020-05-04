@@ -20,21 +20,22 @@
 
 ### Пути улучшения UX, обоснование необходимости
 
-* Добавления скрола для просмотра информации </br>
-
+* Переработка интерфейса информации о коктейле с целью улучшения его читабельности и восприятия </br>
+* Обособление текста во вкладке со справочной информацией для улучшения эстетической составляющей </br>
+* Перевод интерфейса на русский язык, так как целевая аудитория приложения состоит преимущественно из представителей СНГ </br>
+* Переработка полосы прокрутки для повышения целостности интерфейса </br>
 
 ## Внешний вид приложения до улучшения: 
 
-![char]()
-![gal]()
-![home]()
-![shtora]()
+![](https://github.com/NWarragal/TIPSY/blob/master/docs/UX%20improvement/screenshots/old1.jpg)
+![](https://github.com/NWarragal/TIPSY/blob/master/docs/UX%20improvement/screenshots/old3.jpg)
+![](https://github.com/NWarragal/TIPSY/blob/master/docs/UX%20improvement/screenshots/old4.jpg)
+![](https://github.com/NWarragal/TIPSY/blob/master/docs/UX%20improvement/screenshots/old5.jpg)
 
 ## Внешний вид приложения после улучшения: 
 
-![char]()
-![char2]()
-![home]()
-![izbr]()
-![shtora]()
-![spis]()
+![]()
+![]()
+![]()
+![]()
+![]()
