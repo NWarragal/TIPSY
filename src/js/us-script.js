@@ -3,6 +3,7 @@ let swiperActive = false;
 let numb = 6;
 let activeLink = 0;
 let aboutUs = 0;
+let help = 0;
 let msNumb;
 let currentPos;
 
@@ -21,10 +22,12 @@ function showInfoDrink() { //функция открытия экрана с и�
         let card_page = document.getElementById("loaded_block");
         let about_div = document.getElementById("about_title");
         let coctail_info = document.getElementById("coctail_info");
+        let help = document.getElementById("help");
         function waiting1() {
             loading_coctail_title.style.display = "inline";
         }
         function waiting2() {
+            help.style.display = "none";
             about_div.style.display = "none";
             coctail_info.style.display = "block";
             loading_coctail_title.style.display = "none";
@@ -177,8 +180,6 @@ function randomInteger(min = 0, max = 4) {// случайное число от 
 function openRandomCoctail() {
     if (activeLink != 0) {
         let listNode = document.getElementsByTagName("li");
-        listNode[activeLink].style.fontWeight = 100;
-        listNode[0].style.fontWeight = 1000;
         listNode[0].classList.add("max_text");
         setTimeout(() => { listNode[0].classList.add("max_text"); }, 700);
         listNode[activeLink].classList.add("min_text");
@@ -200,8 +201,6 @@ function openRandomCoctail() {
 function openListCoctails() {
     if (activeLink != 1) {
         let listNode = document.getElementsByTagName("li");
-        listNode[activeLink].style.fontWeight = 100;
-        listNode[1].style.fontWeight = 1000;
         setTimeout(() => { listNode[1].classList.add("max_text"); }, 700);
         listNode[activeLink].classList.add("min_text");
         activeLink = 1;
@@ -227,13 +226,49 @@ function showAboutUs() { //функция открытия экрана с ин�
         let card_page = document.getElementById("loaded_block");
         let useless_div = document.getElementById("coctail_info");
         let about_div = document.getElementById("about_title");
-
+        let help = document.getElementById("help");
         function waiting1() {
             loading_card_title.style.display = "inline";
         }
-
         function waiting2() {
+            help.style.display = "none";
             about_div.style.display = "block";
+            useless_div.style.display = "none";
+            loading_card_title.style.display = "none";
+            card_page.style.display = "block";
+            card_page.classList.add("animatione");
+        }
+        setTimeout(waiting1, 200);
+        setTimeout(waiting2, randomInteger(0, 20) * 100);
+    }
+
+    anim.setDirection(1);
+    anim.play();
+    body.classList.remove("open");
+    body.classList.remove("completed");
+
+    let closebar = document.getElementById("swiper-container");
+    let lefbar = document.getElementById("menu");
+    closebar.style.zIndex = -1;
+    lefbar.style.zIndex = -1;
+    swiperActive = false;
+}
+
+function showHelp() { //функция открытия экрана с экраном помощи
+    if (help != 1) {
+        let welcome = document.getElementById("content_welcome");
+        welcome.style.display = "none";
+        let loading_card_title = document.getElementById("loading_card_title");
+        let card_page = document.getElementById("loaded_block");
+        let useless_div = document.getElementById("coctail_info");
+        let about_div = document.getElementById("about_title");
+        let help = document.getElementById("help");
+        function waiting1() {
+            loading_card_title.style.display = "inline";
+        }
+        function waiting2() {
+            help.style.display = "block";
+            about_div.style.display = "none";
             useless_div.style.display = "none";
             loading_card_title.style.display = "none";
             card_page.style.display = "block";

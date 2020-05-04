@@ -25,24 +25,6 @@
   }
 }
 
-@keyframes weigth_min {
-  from {
-    font-weight: 1000;
-  }
-  to {
-    font-weight: 100;
-  }
-}
-
-@keyframes weight_max {
-  from {
-    font-weight: 100;
-  }
-  to {
-    font-weight: 1000;
-  }
-}
-
 @keyframes paper_off {
   from {
     width: 80%;
@@ -280,11 +262,12 @@ ul {
 ul li {
   color: #fff;
   font-family: sans-serif;
-  padding: 20px 0;
+  padding: 20px 5px;
+  transition-duration: 0.1s;
 }
 
-ul li:first-child{
-  font-weight: 1000;
+ul li:hover{
+  border-left: 5px solid #fff;
 }
 
 h2 {
@@ -482,15 +465,11 @@ main {
 }
 
 .max_text{
-  animation: weigth_max 1.5s;
-  animation-fill-mode: forwards;
-  transition-timing-function: linear;
+  border-left: 5px solid #fff;
 }
 
 .min_text{
-  animation: weigth_min 0.2s;
-  animation-fill-mode: forwards;
-  transition-timing-function: linear;
+  border-left: none;
 }
 
 .anim_arrows_on{
