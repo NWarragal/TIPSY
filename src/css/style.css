@@ -642,3 +642,7 @@ main {
   transition-timing-function: linear;
   cursor: pointer;
 }
+
+.a{
+  color: red;
+}
