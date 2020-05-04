@@ -1,7 +1,6 @@
 package com.example.myapplication.ServiceClasses;
 
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
 import android.view.Window;
 import android.view.WindowManager;
@@ -9,9 +8,6 @@ import android.widget.Button;
 
 import com.example.myapplication.GUI.MainScreen.Cockteil_Item;
 import com.example.myapplication.R;
-import com.example.myapplication.ServiceClasses.MainScreenPagerAdapter;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 
@@ -54,7 +50,7 @@ public class DrawerActivity extends AppCompatActivity {
         NavigationView navigationView = findViewById(R.id.nav_view);
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_gallerey, R.id.nav_slideshow)
                 .setDrawerLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
