@@ -47,6 +47,7 @@ function showInfoDrink() { //функция открытия экрана с и�
     closebar.style.zIndex = -1;
     lefbar.style.zIndex = -1;
     swiperActive = false;
+    setFullInfoDrink(msNumb[currentPos]);
 }
 
 function swiperMove() { //функция нового свайпа с подменой информации под ним(не готово пока)
@@ -288,4 +289,42 @@ function showHelp() { //функция открытия экрана с экра
     closebar.style.zIndex = -1;
     lefbar.style.zIndex = -1;
     swiperActive = false;
+}
+
+function setFullInfoDrink(curr) {
+    let information = getAllInfo(curr);
+    let drink_info_name = document.getElementById("drink_info_name");
+    drink_info_name.textContent = information[0];
+    let drink_info_ingredients = document.getElementById("drink_info_ingredients");
+    let ms = information[1].split("<br>");
+    drink_info_ingredients.textContent = ms[0];
+    for (let i = 1; i < ms.length; i++) {
+        let p = document.createElement('p');
+        p.textContent = ms[i];
+        drink_info_ingredients.appendChild(p);
+    }
+    let drink_info_fixtures = document.getElementById("drink_info_fixtures");
+    ms = information[2].split("<br>");
+    drink_info_fixtures.textContent = ms[0];
+    for (let i = 1; i < ms.length; i++) {
+        let p = document.createElement('p');
+        p.textContent = ms[i];
+        drink_info_fixtures.appendChild(p);
+    }
+    let drink_info_recipe = document.getElementById("drink_info_recipe");
+    ms = information[3].split("<br>");
+    drink_info_recipe.textContent = ms[0];
+    for (let i = 1; i < ms.length; i++) {
+        let p = document.createElement('p');
+        p.textContent = ms[i];
+        drink_info_recipe.appendChild(p);
+    }
+    let drink_info_category = document.getElementById("drink_info_category");
+    drink_info_category.textContent = information[4];
+    let drink_info_description = document.getElementById("drink_info_description");
+    drink_info_description.textContent = information[5];
+    let image_cocktail = document.getElementById("image_cocktail");
+    let photoname = './db/cockt/' + (curr + 1) + '.jpg'
+    image_cocktail.setAttribute('src', photoname);
+    image_cocktail.style.width = "30%";
 }

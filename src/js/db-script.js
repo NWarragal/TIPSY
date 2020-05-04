@@ -19,3 +19,29 @@ function getNameAndRating(num) {
     ms[3] = info[num][0]["Простота приготовления"];
     return ms;
 }
+
+function getAllInfo(num){
+    let ms = [];
+    ms[1] = "";
+    ms[2] = "";
+    ms[0] = "  " + info[num][0]["Название"];
+    for(let i = 0; i < info[num].length; i++){
+        ms[1] += info[num][i]["Ингредиенты"] + ": ";
+        ms[1] += info[num][i]["Обьем ингредиентов"];
+        ms[1] += info[num][i]["мера ингредиентов"] + "\n";
+    }
+    ms[1] = ms[1].split("\n");
+    ms[1] = ms[1].join("<br>");
+    for(let i = 0; i < info[num].length; i++){
+        ms[2] += info[num][i]["Приспособления"] + ": ";
+        ms[2] += info[num][i]["количество приспособлений"] + "\n";
+    }
+    ms[2] = ms[2].split("\n");
+    ms[2] = ms[2].join(" <br>");
+    ms[3] = info[num][0]["Рецепт приготовления"];
+    ms[3] = ms[3].split("\n");
+    ms[3] = ms[3].join("<br>");
+    ms[4] = info[num][0]["Категории"];
+    ms[5] = info[num][0]["Описание"];
+    return ms;
+}

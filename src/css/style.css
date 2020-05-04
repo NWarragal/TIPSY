@@ -434,14 +434,21 @@ main {
 }
 
 .image_coctail{
-  width: 49%;
+  width: 50%;
+  background-color: #fff;
 }
 
 .description{
-  width: 49%;
+  width: 50%;
   font-size: 20px;
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  height: 500px;
+  background-color: #fff;
+  color: black;
+  /* margin-top: 20px; */
+  padding: 20px;
 }
 
 .description div{
@@ -450,8 +457,22 @@ main {
   align-items: center;
 }
 
+.topbot{
+  border-bottom: 1px solid black;
+}
+
+.onlytop{
+  border-top: 1px solid black;
+}
+
+.description div div{
+  width: 50%;
+}
+
 .description div div p{
+  text-align: left;
   font-size: 15px;
+  font-weight: 600;
 }
 
 .animatione {
@@ -494,4 +515,10 @@ main {
   animation: paper_off 1s;
   animation-fill-mode: forwards;
   transition-timing-function: linear;
+}
+
+.image_coctail img{
+  width: 100px !important;
+  padding-top: 50px;
+  align-items: center;
 }
