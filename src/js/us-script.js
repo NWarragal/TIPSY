@@ -23,7 +23,7 @@ function showInfoDrink() { //функция открытия экрана с и�
             card_page.classList.add("animatione");
         }
         setTimeout(waiting1, 200);
-        setTimeout(waiting2, 2000);
+        setTimeout(waiting2, randomInteger(10, 30) * 100);
     }
     anim.setDirection(1);
     anim.play();
@@ -159,7 +159,7 @@ function openRandomCoctail() {
         listNode[activeLink].style.fontWeight = 100;
         listNode[0].style.fontWeight = 1000;
         listNode[0].classList.add("max_text");
-        setTimeout(() => {listNode[0].classList.add("max_text");}, 700);
+        setTimeout(() => { listNode[0].classList.add("max_text"); }, 700);
         listNode[activeLink].classList.add("min_text");
         activeLink = 0;
         listNode[activeLink].classList.remove("max_text");
@@ -181,7 +181,7 @@ function openListCoctails() {
         let listNode = document.getElementsByTagName("li");
         listNode[activeLink].style.fontWeight = 100;
         listNode[1].style.fontWeight = 1000;
-        setTimeout(() => {listNode[1].classList.add("max_text");}, 700);
+        setTimeout(() => { listNode[1].classList.add("max_text"); }, 700);
         listNode[activeLink].classList.add("min_text");
         activeLink = 1;
         listNode[activeLink].classList.remove("max_text");
@@ -206,19 +206,20 @@ function showAboutUs() { //функция открытия экрана с ин�
         let card_page = document.getElementById("loaded_block");
         let useless_div = document.getElementById("coctail_info");
         let about_div = document.getElementById("about_title");
+
         function waiting1() {
             loading_card_title.style.display = "inline";
         }
-        
+
         function waiting2() {
-            about_title.style.display = "block";
+            about_div.style.display = "block";
             useless_div.style.display = "none";
             loading_card_title.style.display = "none";
             card_page.style.display = "block";
             card_page.classList.add("animatione");
         }
         setTimeout(waiting1, 200);
-        setTimeout(waiting2, 2000);
+        setTimeout(waiting2, randomInteger(0, 20) * 100);
     }
 
     anim.setDirection(1);
