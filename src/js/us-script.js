@@ -240,6 +240,7 @@ function openRandomCoctail() {
         let third_property = document.getElementsByClassName("third_property");
         let list = document.getElementsByClassName("list_drink");
         let name = document.getElementById("name_drink");
+        let but = document.getElementById("find_drink");
         drinkInfo[0].classList.remove("anim_paper_off");
         drinkInfo[0].classList.add("anim_paper_on");
         leftArrow[0].classList.remove("anim_arrows_off");
@@ -260,6 +261,7 @@ function openRandomCoctail() {
             first_property[0].style.display = "flex";
             second_property[0].style.display = "flex";
             third_property[0].style.display = "flex";
+            but.textContent = "Узнать больше";
             list[0].style.display = "none";
             name.classList.remove("anim_arrows_off");
             name.classList.add("anim_arrows_on");
@@ -286,6 +288,7 @@ function openListCoctails() {
         let third_property = document.getElementsByClassName("third_property");
         let list = document.getElementsByClassName("list_drink");
         let name = document.getElementById("name_drink");
+        let but = document.getElementById("find_drink");
         drinkInfo[0].classList.remove("anim_paper_on");
         drinkInfo[0].classList.add("anim_paper_off");
         leftArrow[0].classList.remove("anim_arrows_on");
@@ -303,6 +306,7 @@ function openListCoctails() {
         function waiting2() {
             list[0].classList.remove("anim_arrows_off");
             list[0].classList.add("anim_arrows_on");
+            but.textContent = "Подробнее";
             first_property[0].style.display = "none";
             second_property[0].style.display = "none";
             third_property[0].style.display = "none";

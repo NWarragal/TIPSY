@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:100);
 * {
   box-sizing: border-box;
+  resize: 0;
 }
 
 /* включение разметки элементов сайта */
