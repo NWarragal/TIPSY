@@ -426,7 +426,7 @@ function setFullInfoDrink(curr) {
     let image_cocktail = document.getElementById("image_cocktail");
     let photoname = './db/cockt/' + (curr + 1) + '.jpg'
     image_cocktail.setAttribute('src', photoname);
-    image_cocktail.style.width = "30%";
+    //image_cocktail.style.width = "50%";
 }
 
 function fillDrinkList() {
