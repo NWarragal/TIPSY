@@ -34,8 +34,7 @@
 
 ## Внешний вид приложения после улучшения: 
 
-![]()
-![]()
-![]()
-![]()
-![]()
+![](https://github.com/NWarragal/TIPSY/blob/master/docs/UX%20improvement/screenshots/new1.jpg)
+![](https://github.com/NWarragal/TIPSY/blob/master/docs/UX%20improvement/screenshots/new2.jpg)
+![](https://github.com/NWarragal/TIPSY/blob/master/docs/UX%20improvement/screenshots/new3.jpg)
+![](https://github.com/NWarragal/TIPSY/blob/master/docs/UX%20improvement/screenshots/new4.jpg)
