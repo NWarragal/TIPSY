@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:dist="http://schemas.android.com/apk/distribution"
-    package="com.example.tipsy">
-
-    <dist:module dist:instant="true" />
+    package="com.example.myapplication">
 
     <application
         android:allowBackup="true"
@@ -12,9 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".Sandbox">
 
+        </activity>
+        <activity android:name=".ServiceClasses.SplashScreen">
+            <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-        <activity android:name=".SplashScreen">
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
+        <activity android:name=".ServiceClasses.DrawerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -22,15 +27,6 @@
             </intent-filter>
         </activity>
 
-
-
-        <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>
